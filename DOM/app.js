@@ -1,31 +1,49 @@
-const heading = document.querySelector("h2");
-const btn = document.querySelector(".btn");
-const link = document.querySelector(".link");
+const container = document.querySelector(".container");
+const list = document.querySelector(".list-items");
 
-btn.addEventListener("click", function(evt){
-    console.log(evt);
-    console.log(evt.currentTarget);
-    console.log(evt.currentTarget.textContent);
-    console.log(evt.currentTarget.classList);
-    console.log(evt.type);
-})
+function showBubling(e){
+    console.log("target", e.target);
+    console.log("current target", e.currentTarget);
+    // if(e.target.classList.contains("link")){
+    //     console.log(e.target);
+    // }
+}
 
-heading.addEventListener("mouseenter", function(evt){
-    console.log(evt);
-    console.log(evt.currentTarget);
-    console.log(evt.currentTarget.classList);
-    let listOfClasses = evt.currentTarget.classList;
-    if(listOfClasses.contains("red")){
-        listOfClasses.remove("red")
-    }else{
-        listOfClasses.add("red")
-    }
-})
+function stopPropagation(e){
+    e.stopPropagation();
+}
+
+window.addEventListener("click", showBubling,{capture: false});
+container.addEventListener("click", showBubling,{capture: false});
+document.addEventListener("click", showBubling,{capture: false});
+list.addEventListener("click", showBubling,{capture: false});
 
 
+// child(ul) -> container -> document -> window
 
-link.addEventListener("click", function(e){
-    e.preventDefault();
-    console.log(e.target);
-    console.log(e.target.getAttribute("href"));
-})
+
+// const container = document.querySelector(".container");
+// const heading = document.querySelector(".heading");
+// const button = document.querySelector("button");
+
+// console.log(heading);
+
+
+
+// button.addEventListener("click", function(){
+//     let heading = document.createElement("h1");
+//     heading.textContent = "I am dynamic heading";
+//     heading.classList.add("heading");
+//     container.appendChild(heading)
+// })
+
+// container.addEventListener("click", function(e){
+//     console.log(e.target);
+//     if(e.target.classList.contains("heading")){
+//         console.log("I AM HEADING");
+//     }
+// })
+
+// heading.addEventListener("click", function(e){
+//     console.log("Hello I am heading");
+// })
