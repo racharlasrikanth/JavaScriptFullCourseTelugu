@@ -1,29 +1,31 @@
 const heading = document.querySelector("h2");
 const btn = document.querySelector(".btn");
-const text = document.querySelector("p");
+const link = document.querySelector(".link");
 
-text.addEventListener("mouseenter", function(){
-    heading.classList.add("red");
+btn.addEventListener("click", function(evt){
+    console.log(evt);
+    console.log(evt.currentTarget);
+    console.log(evt.currentTarget.textContent);
+    console.log(evt.currentTarget.classList);
+    console.log(evt.type);
 })
 
-text.addEventListener("mouseleave", function(){
-    heading.classList.remove("red");
-})
-
-// btn.addEventListener("click", function(){
-//     if(heading.classList.contains("blue")){
-//         heading.classList.remove("blue");
-//     }else{
-//         heading.classList.add("blue");
-//     }
-// })
-
-btn.addEventListener("click", function(){
-    if(heading.classList.contains("hide")){
-        heading.classList.remove("hide")
-        btn.textContent = "Hide Text";
+heading.addEventListener("mouseenter", function(evt){
+    console.log(evt);
+    console.log(evt.currentTarget);
+    console.log(evt.currentTarget.classList);
+    let listOfClasses = evt.currentTarget.classList;
+    if(listOfClasses.contains("red")){
+        listOfClasses.remove("red")
     }else{
-        heading.classList.add("hide")
-        btn.textContent = "Show Text";
+        listOfClasses.add("red")
     }
+})
+
+
+
+link.addEventListener("click", function(e){
+    e.preventDefault();
+    console.log(e.target);
+    console.log(e.target.getAttribute("href"));
 })
