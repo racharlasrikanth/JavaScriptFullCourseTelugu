@@ -19,7 +19,7 @@ const person = {
   job: {
     title: 'developer',
     company: {
-      name: 'coding addict',
+      name: 'hello somename',
       address: '123 main street',
     },
   },

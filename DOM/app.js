@@ -1,49 +1,48 @@
-const container = document.querySelector(".container");
-const list = document.querySelector(".list-items");
+// CRUD
 
-function showBubling(e){
-    console.log("target", e.target);
-    console.log("current target", e.currentTarget);
-    // if(e.target.classList.contains("link")){
-    //     console.log(e.target);
-    // }
-}
-
-function stopPropagation(e){
-    e.stopPropagation();
-}
-
-window.addEventListener("click", showBubling,{capture: false});
-container.addEventListener("click", showBubling,{capture: false});
-document.addEventListener("click", showBubling,{capture: false});
-list.addEventListener("click", showBubling,{capture: false});
+// localStorage.setItem("fullname", "Emma Watson");
+// localStorage.setItem("fried", "harry");
+// localStorage.setItem("job", "actors");
+// localStorage.setItem("address", "england");
 
 
-// child(ul) -> container -> document -> window
+// const newName = localStorage.getItem("fullname");
+// const newFriend = localStorage.getItem("fried");
+// console.log(newName, newFriend);
 
+// localStorage.setItem("fried", "harry potter");
 
-// const container = document.querySelector(".container");
-// const heading = document.querySelector(".heading");
-// const button = document.querySelector("button");
+// localStorage.removeItem("fried");
 
-// console.log(heading);
+// localStorage.clear();
 
 
 
-// button.addEventListener("click", function(){
-//     let heading = document.createElement("h1");
-//     heading.textContent = "I am dynamic heading";
-//     heading.classList.add("heading");
-//     container.appendChild(heading)
-// })
+// const friends = ["emma", "watson", "harry"];
+// console.log(typeof friends);
+// console.log(typeof JSON.stringify(friends));
 
-// container.addEventListener("click", function(e){
-//     console.log(e.target);
-//     if(e.target.classList.contains("heading")){
-//         console.log("I AM HEADING");
-//     }
-// })
+// localStorage.setItem("friendList", JSON.stringify(friends));
 
-// heading.addEventListener("click", function(e){
-//     console.log("Hello I am heading");
-// })
+// let values;
+// if(localStorage.getItem("friendList")){
+//     values = JSON.parse(localStorage.getItem("friendList"));
+// }else{
+//     values = [];
+// }
+// values.push("hello new value");
+// console.log(values);
+
+// localStorage.setItem("friendList", JSON.stringify(values));
+
+const firstName = document.querySelector("input[type='text']");
+const password = document.querySelector("input[type='password']");
+const submit = document.querySelector(".submit");
+
+submit.addEventListener("click", function(e){
+    console.log(firstName.value);
+    console.log(password.value);
+    localStorage.setItem("username", firstName.value);
+    localStorage.setItem("password", password.value);
+    localStorage.setItem("userLoggedStatus", true);
+})
