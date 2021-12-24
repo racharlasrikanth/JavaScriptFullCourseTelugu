@@ -1,6 +1,6 @@
 // JSON.stringify(), JSON.parse
 
-const friends = ['john', 'peter', 'bob'];
+const friends = ['srikanth', 'emma', 'watson'];
 localStorage.setItem('friends', JSON.stringify(friends));
 
 const values = JSON.parse(localStorage.getItem('friends'));

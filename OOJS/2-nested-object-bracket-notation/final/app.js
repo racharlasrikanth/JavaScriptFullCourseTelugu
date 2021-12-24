@@ -6,7 +6,7 @@ const age = 40;
 let random = 'random-value';
 random = 'age';
 const person = {
-  name: 'john',
+  name: 'srikanth',
   age: age,
   married: true,
   siblings: ['anna', 'peter'],

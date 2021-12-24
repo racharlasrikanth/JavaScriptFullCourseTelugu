@@ -2,11 +2,11 @@
 // session storage, local storage
 // setItem, getItem , removeItem, clear
 
-// localStorage.setItem('name','john')
-// sessionStorage.setItem('name','john')
+// localStorage.setItem('name','srikanth')
+// sessionStorage.setItem('name','srikanth')
 
-localStorage.setItem('name', 'john');
-localStorage.setItem('friend', 'peter');
+localStorage.setItem('name', 'srikanth');
+localStorage.setItem('friend', 'emma');
 localStorage.setItem('job', 'developer');
 localStorage.setItem('address', 'street 123');
 
