@@ -1,46 +1,30 @@
-// const newArr = []
-// function newGreet(){
+class Account{
+    constructor(name, initialBalance){
+        this.name = name;
+        this.balance = initialBalance;
+    }
 
-// }
-// const newGreet = function(){
-//     console.log("HELLO");
-// }
-// fun
-// ana
-// fun ex
-// fun ar
-// fun param
-// arrow fun
-// fun retu
-
-const person = {
-    firstName: "emma watson",
-    age: 27,
-    siblings: ["emma", "watson"],
-    greet: function(){
-        console.log("HELLO");
-    },
-    address: {
-        colony: "some colony",
-        pinCode: 345442,
-        state: "TG",
-        steet: {
-            helo: "some data",
-            hello: "some more data"
-        }
-    },
-    random: "I am random text",
+    bankName = "Chase"
+    deposit(amount){
+        this.balance += amount;
+        console.log(`Hello ${this.name}, your balance is ${this.balance}`);
+    }
+    fullName(){
+        console.log("Hello");
+    }
 }
 
-console.log(person);
-// console.log(person.firstName);
-// console.log(person.address);
-// console.log(person["age"]);
+const emma = new Account("emma", 100);
+console.log(emma);
+emma.deposit(1000)
 
-let randomText = "random";
 
-console.log(person.randomText);  // person.randomText
-console.log(person[randomText]); // person["random"]
-console.log(person["random"]);
-console.log(randomText);
-console.log(person.address.steet.hello);
+// function Account(name, initialBalance) {
+//     this.name = name;
+//     this.balance = initialBalance;
+// }
+// const srikanth = new Account('srikanth', 200);
+// Account.prototype.deposit = function (amount) {
+//     this.balance += amount;
+//     console.log(`Hello ${this.name}, your balance is ${this.balance}`);
+//   };
