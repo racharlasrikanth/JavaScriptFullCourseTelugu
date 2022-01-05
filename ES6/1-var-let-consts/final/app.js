@@ -21,6 +21,6 @@ amount = 200;
 const total = 100;
 // console.log(total);
 // total = 200;
-const person = { name: 'bob' };
-person.name = 'john';
+const person = { name: 'harry' };
+person.name = 'emma';
 console.log(person.name);

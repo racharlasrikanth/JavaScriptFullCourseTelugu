@@ -10,10 +10,39 @@
       body {
         text-transform: capitalize;
       }
+      .container{
+        display: flex;
+      }
+      .box{
+        width: 100px;
+        height: 100px;
+        color: white;
+      }
+      .box1{
+        background: red;
+        order: -10;
+      }
+      .box2{
+        background: chartreuse;
+        order: 7;
+      }
+      .box3{
+        background: black;
+        order: 10;
+      }
+      .box4{
+        background: rgb(100, 100, 5);
+        order: 0;
+      }
     </style>
   </head>
   <body>
-    <h1>VAR, LET, CONST</h1>
+    <div class="container">
+      <div class="box box1">box1</div>
+      <div class="box box2">box2</div>
+      <div class="box box3">box3</div>
+      <div class="box box4">box4</div>
+    </div>
     <!-- javascript -->
     <script src="app.js"></script>
   </body>
