@@ -4,7 +4,7 @@
 // Arrays
 
 const fruits = ['orange', 'banana', 'lemon'];
-const friends = ['emma', 'peter', 'harry', 'anna', 'kelly'];
+const friends = ['emma', 'watson', 'harry', 'daniel', 'venne'];
 
 const orange = fruits[0];
 const banana = fruits[1];

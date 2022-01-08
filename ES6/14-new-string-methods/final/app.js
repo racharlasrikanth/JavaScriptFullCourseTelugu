@@ -1,12 +1,12 @@
 // new string methods
 // startsWith(), endsWith(), includes(),repeat()
 
-const person = 'Peter Smith';
+const person = 'Emma Watson';
 const employee = '23456-EMP-EMMA-SMITH';
 const manager = '23456-MAN-HARRY-DOE';
 // starts width
-console.log(person.startsWith('Pet'));
-console.log(person.startsWith('peter'));
+console.log(person.startsWith('Emm'));
+console.log(person.startsWith('emma'));
 
 // ends width
 console.log(employee.startsWith('EMP', 6));

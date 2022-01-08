@@ -6,9 +6,9 @@ const udemy = 'udemy';
 const letters = [...udemy];
 console.log(letters);
 
-const boys = ['john', 'peter', 'bob'];
-const girls = ['susan', 'anna'];
-const bestFriend = 'arnold';
+const boys = ['srikanth', 'daniel', 'harry'];
+const girls = ['emma', 'watson'];
+const bestFriend = 'hermoine';
 
 const friends = [...boys, bestFriend, ...girls];
 console.log(friends);

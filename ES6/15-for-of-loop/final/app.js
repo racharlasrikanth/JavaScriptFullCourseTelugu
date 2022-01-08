@@ -3,7 +3,7 @@
 // unlike forEach - we can use break, continue
 
 const fruits = ['apple', 'orange', 'banana', 'peach'];
-const longName = 'John Smith Pepper III';
+const longName = 'Emma watson harry potter';
 let shortName = '';
 
 for (const letter of longName) {

@@ -3,12 +3,12 @@
 // objects into variables
 // As Function Arguments
 
-const bob = {
-    first: 'bob',
-    last: 'sanders',
-    city: 'chicago',
+const emma = {
+    first: 'emma',
+    last: 'watson',
+    city: 'london',
     siblings: {
-      sister: 'jane',
+      sister: 'hermoine',
     },
   };
   
@@ -17,4 +17,4 @@ const bob = {
     console.log(first, last, city);
   }
   
-  printPerson(bob);
+  printPerson(emma);

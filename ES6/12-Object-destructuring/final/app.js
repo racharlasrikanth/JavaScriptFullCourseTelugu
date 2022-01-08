@@ -3,8 +3,8 @@
 // objects into variables
 // Objects
 
-const bob = {
-    first: 'bob',
+const emma = {
+    first: 'emma',
     last: 'sanders',
     city: 'chicago',
     siblings: {
@@ -18,11 +18,11 @@ const bob = {
     city,
     zip,
     siblings: { sister: favoriteSibling },
-  } = bob;
+  } = emma;
   console.log(firstName, last, city, zip, favoriteSibling);
   
-  // const firstName = bob.first;
-  // const lastName = bob.last;
-  // const sister = bob.siblings.sister;
+  // const firstName = emma.first;
+  // const lastName = emma.last;
+  // const sister = emma.siblings.sister;
   
   // console.log(firstName, lastName, sister);

@@ -1,24 +1,24 @@
 
 
-// const fruits = ['orange', 'banana', 'lemon'];
-// const friends = ['emma', 'harry', 'don', 'hermoine'];
+// const youtube = 'Youtube';
+// console.log(youtube);
+
+// console.log(...youtube);
+// console.log([...youtube]);
 
 
-// const orange = fruits[0];
-// const banana = fruits[1];
-// const lemon = fruits[2];
-// console.log(orange, banana, lemon);
+// const friends = ['emma', 'watson', 'harry'];
 
-// const [ emma, ,don, hello ] = friends;
-// console.log(emma, don, hello);
+// const newFriends = [...friends];
 
+// newFriends.push('Daniel');
 
-function hello(arr){
-    const [emma, harry, don, hermoine] = arr;
-    // const emma = arr[0];
-    // const harry = arr[1];
-    // const don = arr[2];
-    // const hermoine = arr[3]
-    console.log(emma, harry, don, hermoine);
-}
-hello(['emma', 'harry', 'don', 'hermoine'])
+// console.log(friends);
+// console.log(newFriends);
+
+const boys = ['harry', 'potter', 'daniel'];
+const girls = ['emma', 'hermoine'];
+const bestFriedn = 'emma_watson';
+
+const newFirendList = [...boys, bestFriedn, ...girls];
+console.log(newFirendList);

@@ -3,7 +3,7 @@
 // Split into single items and copy them.
 // ES2018 - ES8
 
-const person = { name: 'emma', job: 'developer' };
-const newPerson = { ...person, city: 'chicago', name: 'peter' };
+const person = { name: 'emma', job: 'actor' };
+const newPerson = { ...person, city: 'london', name: 'emma watson' };
 console.log(person);
 console.log(newPerson);
