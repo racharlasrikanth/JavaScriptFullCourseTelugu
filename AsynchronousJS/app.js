@@ -1,33 +1,34 @@
 // Callback hell, Promise, Async/Await
 
-// Synchronous Javascirpt
+// Pending, Resolved, Rejected
+// then catch
 
-// soup
-// water boil 10min
-// chop carrots
-// add carrots boil 5min
-// chop onions
-// add oining 5min boil
+const url = "https://source.unsplash.com/random";
 
-// setTimeout, fetchData, getGeoLocation, setTimer
+const button = document.querySelector(".btn");
+const container = document.querySelector(".img-container");
 
-boilWater();
-console.log("Chop Carrots");
+button.addEventListener("click", () => {
+    document.querySelector(".loading").classList.remove("hide");
+    loadImage(url).then((result) => {
+        container.appendChild(result);
+        document.querySelector(".loading").classList.add("hide");
+        console.log(result);
+    }).catch((err) => {
+        container.innerHTML = "<h1>ERROR</h1>"
+        console.log(err);
+    })
+})
 
-
-function boilWater(){
-    console.log("Boiling Water");
-    setTimeout(() => {
-        console.log('Water boiling Completed');
-        console.log("Adding Carrots");
-        setTimeout(() => {
-            console.log("Carrots Completed");
-            console.log("ADding Onions");
-            setTimeout(() => {
-                console.log("Onions Done....");
-                console.log("***SOUP READY***");
-            }, 5000)
-        }, 5000);
-        console.log("Chop Onions...");
-    }, 10000)
+function loadImage(url){
+    return new Promise((resolve, reject) => {
+        let img = new Image();
+        img.addEventListener("load", () => {
+            resolve(img)
+        })
+        img.addEventListener("error", () => {
+            reject(new Error(`Failed to load image frmo the api, url : ${url}`))
+        })
+        img.src = url;
+    })
 }
