@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .red{
+            background: rgb(231, 105, 105);
+        }
+        .green{
+            background: rgb(128, 240, 128);
+        }
+        ul li{
+            padding: .5rem 1rem;
+            border-radius: 3px;
+            list-style-type: none;
+        }
+        @media screen and (min-width: 768px) {
+            ul{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+        }
+        @media screen and (min-width: 992px) {
+            ul{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>hello</h1>
+
+    <button>get data</button>
+    <ul class="result"></ul>
+    <!-- script -->
+    <script src="./app.js"></script>
+</body>
+</html>
